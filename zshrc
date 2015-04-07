@@ -83,9 +83,8 @@ prompt pure
 # Reverse search
 bindkey -e
 
-eval `dircolors ~/.dir_colors`
-
 if [ `uname` = 'Linux' ]; then
+    eval `dircolors ~/.dir_colors`
     export LS_OPTIONS='--color=auto'
 else
     export LS_OPTIONS='-G'
