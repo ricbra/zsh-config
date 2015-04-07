@@ -52,6 +52,8 @@ setopt nolisttypes
 setopt alwaystoend
 # Try to correct the spelling of commands
 setopt correct
+# https://github.com/robbyrussell/oh-my-zsh/issues/449
+setopt no_nomatch  
 
 # case-insensitive (uppercase from lowercase) completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -81,8 +83,12 @@ prompt pure
 # Reverse search
 bindkey -e
 
-if [ "$TERM" != "dumb" ]; then
-  export LS_OPTIONS='-G'
+eval `dircolors ~/.dir_colors`
+
+if [ `uname` = 'Linux' ]; then
+    export LS_OPTIONS='--color=auto'
+else
+    export LS_OPTIONS='-G'
 fi
 
 # alias
