@@ -104,3 +104,4 @@ alias dev='app/console -e dev'
 
 ### PATH
 export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
+[[ -s "/Users/richard/.gvm/scripts/gvm" ]] && source "/Users/richard/.gvm/scripts/gvm"
