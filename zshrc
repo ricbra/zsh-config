@@ -101,6 +101,7 @@ alias behat='bin/behat'
 alias composer_hhvm='hhvm `which composer`'
 alias prod='app/console -e=prod'
 alias dev='app/console -e=dev'
+alias dig='dig +short +noshort'
 
 ### PATH
 export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
