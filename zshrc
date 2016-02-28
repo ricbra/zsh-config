@@ -106,7 +106,11 @@ alias composer_hhvm='hhvm `which composer`'
 alias prod='app/console -e=prod'
 alias dev='app/console -e=dev'
 alias dig='dig +short +noshort'
+alias dm='docker-machine'
+alias dc='docker-compose'
 
 ### PATH
 export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
 [[ -s "/Users/richard/.gvm/scripts/gvm" ]] && source "/Users/richard/.gvm/scripts/gvm"
+
+source ~/.zsh/zsh-autosuggestions
