@@ -83,6 +83,10 @@ prompt pure
 # Reverse search
 bindkey -e
 
+# Autosuggest
+source ~/.zsh/zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0162'
+
 if [ `uname` = 'Linux' ]; then
     eval `dircolors ~/.dir_colors`
     export LS_OPTIONS='--color=auto'
