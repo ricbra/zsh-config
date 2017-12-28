@@ -54,6 +54,8 @@ setopt alwaystoend
 setopt correct
 # https://github.com/robbyrussell/oh-my-zsh/issues/449
 setopt no_nomatch  
+# Disable annoying confirm
+setopt rmstarsilent
 
 # case-insensitive (uppercase from lowercase) completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -102,7 +104,6 @@ alias ..="cd .."
 alias projects="cd ~/projects/"
 alias phps='bin/phpspec'
 alias behat='bin/behat'
-alias composer_hhvm='hhvm `which composer`'
 alias prod='app/console -e=prod'
 alias dev='app/console -e=dev'
 alias dig='dig +short +noshort'
