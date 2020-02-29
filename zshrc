@@ -109,9 +109,17 @@ alias dev='app/console -e=dev'
 alias dig='dig +short +noshort'
 alias dm='docker-machine'
 alias dc='docker-compose'
+alias app='dc exec php-fpm bin/console'
+alias ec2-list-all='aws ec2 describe-instances --query '\''Reservations[].Instances[].[PrivateIpAddress,PrivateDnsName,InstanceId,Tags[?Key==`Name`].Value[]]'\'' --output text | sed '\''$!N;s/\n/ /'\'''
+alias dexec='docker-compose exec'
+alias sync-translations='cd src/AppBundle/Resources/translations && aws s3 cp --recursive --exclude "*" --include "*.xliff" --exclude "*/*" s3://automan-uploads-production/translations . && cd -'
+
+alias dockertimesync='docker-machine ssh docker "sudo date -u $(date -u +%m%d%H%M%Y)"'
 
 ### PATH
 export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
-[[ -s "/Users/richard/.gvm/scripts/gvm" ]] && source "/Users/richard/.gvm/scripts/gvm"
 
 source ~/.zsh/zsh-autosuggestions
+export PATH="/usr/local/sbin:$PATH"
+export AM_GRUMPHP_LOCAL=yay
+export CACHE_AND_LOG_DIR=/tmp/automanager
